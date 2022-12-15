@@ -2,9 +2,7 @@
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 
 user_input = list(map(int, input('Введите числа через пробел: ').split()))
-sum = 0
-for i in range(1, len(user_input), 2):
-    sum += user_input[i]
+li_sum = sum(user_input[i] for i in range(1,len(user_input),2))
 
 print(f'Результирующий список: {user_input}')
-print(f'Сумма элементов на нечетных позициях равна {sum}')
+print(f'Сумма элементов на нечетных позициях равна {li_sum}')
